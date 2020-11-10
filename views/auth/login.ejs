@@ -1,25 +1,27 @@
-<%- include('../partials/header') %>
+<%- include('../partials/head') %>
 
-<div class="vertical-center">
-    <div class="container-fluid login">
-        <h1 class="login-title">Dev Tracker</h1>
-        <form action="/auth/login" method="POST">
-            <div class="row">
-                <input type="text" name="username" placeholder="username" class="btn-center login-input">
-            </div>
-            <div class="row">
-                <input type="password" name="password" placeholder="password" class="btn-center login-input">
-            </div>
-            <div class="row">
-                <div class="col col-btn-left">
-                    <input type="submit" class="btn btn-primary login-btn" value="Login">
+<body class="login-body">
+    <%- include('../partials/alert') %>
+    <div class="vertical-center">
+        <div class="container-fluid login">
+            <h1 class="login-title">Dev Tracker</h1>
+            <form action="/auth/login" method="POST">
+                <div class="row">
+                    <input type="text" name="username" placeholder="username" class="btn-center login-input">
                 </div>
-                <div class="col col-btn-right">
-                    <a href="/" class="btn btn-primary login-btn">Go Back</a>
+                <div class="row">
+                    <input type="password" name="password" placeholder="password" class="btn-center login-input">
                 </div>
-            </div>    
-        </form>
+                <div class="row">
+                    <div class="col col-btn-left">
+                        <input type="submit" class="btn btn-primary login-btn" value="Login">
+                    </div>
+                    <div class="col col-btn-right">
+                        <a href="/" class="btn btn-primary login-btn">Go Back</a>
+                    </div>
+                </div>    
+            </form>
+        </div>
     </div>
-</div>
 
 <%- include('../partials/footer') %>

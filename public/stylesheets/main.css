@@ -2,8 +2,16 @@
     background: url("/images/background.jpg");
 }
 
+.login-body {
+    background: url("/images/background.jpg");
+}
+
+.register-body {
+    background: url("/images/background.jpg");
+}
+
 .landing {
-    background: black;
+    background: #F3F3F3;
     margin-top: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -26,13 +34,43 @@
 }
 
 .landing-intro {
-    color: white;
+    color: black;
     margin: auto;
     font-size: 150%;
 }
 
 .landing-buttons {
     margin-top: 25px;
+}
+
+.login-body {
+    background: url("/images/background.jpg");
+}
+
+.login-title {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 400%;
+}
+
+.login {
+    background: #F3F3F3;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 30%;
+    height: 60%;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: blue;   
+}
+
+.login-input {
+    font-size: 150%;
 }
 
 footer {
@@ -43,4 +81,40 @@ footer {
     bottom: 0;
     width: 100%;
     height: 2.5rem;            /* Footer height */
+}
+
+.vertical-center {
+    min-height: 75%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 75vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    min-width: 100px;
+    margin: 5px;
+    font-size: 150%;
+}
+
+.login-lbl {
+    font-size: 125%;
+}
+
+.col-login-lbl {
+    text-align: right;
+}
+
+.col-btn-left {
+    text-align: right;
+}
+
+.col-btn-right {
+    text-align: left;
+}
+
+.btn-center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
