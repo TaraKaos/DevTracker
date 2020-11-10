@@ -1,24 +1,51 @@
-<%- include('./partials/header') %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dev Tracker</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.tiny.cloud/1/5el1rdvc1dyc6w6sjgos22rsl2g1rodh5k5ip3m4kl8gleik/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+            tinymce.init({
+              selector: 'textarea'
+            });
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body class="landing-body">
+        <div class="container">
+            <% if(error && error.length > 0) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
 
-<div class="vertical-center">
-    <div class="container-fluid landing">
-        <div class="row">
-            <h1 class="landing-title">Dev Tracker</h1>
+            <% if(success && success.length >0) { %>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
+            <% } %>
         </div>
-        <div class="row">
-            <p class="landing-intro">
-                Welcome to the Dev Tracker, a development project management site where you can create projects, file bugs, and track development progress.
-            </p>
+
+        <div class="vertical-center">
+            <div class="container-fluid landing">
+                <div class="row landing-row">
+                    <h1 class="landing-title">Dev Tracker</h1>
+                </div>
+                <div class="row">
+                    <p class="landing-intro">
+                        Welcome to the Dev Tracker, a development project management site where you can create projects, file bugs, and track development progress.
+                    </p>
+                </div>
+                <div class="row landing-buttons">
+                    <div class="col col-btn-left">
+                        <a href="/auth/login" class="btn btn-primary login-btn">Login</a>
+                    </div>
+                    <div class="col col-btn-right">
+                        <a href="/auth/register" class="btn btn-primary login-btn">Register</a>
+                    </div>
+                </div> 
+            </div>
         </div>
-        <div class="row landing-buttons">
-            <div class="col col-btn-left">
-                <a href="/auth/login" class="btn btn-primary login-btn">Login</a>
-            </div>
-            <div class="col col-btn-right">
-                <a href="/auth/register" class="btn btn-primary login-btn">Register</a>
-            </div>
-        </div> 
-    </div>
-</div>
 
 <%- include('./partials/footer') %>
