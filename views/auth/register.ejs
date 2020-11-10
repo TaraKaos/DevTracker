@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="vertical-center">
+    <div class="container-fluid login">
+    	<h1 class="login-title">Register</h1>
+        <form action="/auth/register" method="post">
+            <div class="row">
+                <input type="text" name="username" placeholder="username" class="btn-center login-input">
+            </div>
+            <div class="row">
+                <input type="password" name="password" placeholder="password" class="btn-center login-input">
+            </div>
+            <div class="row">
+                <div class="col col-btn-left">
+                    <input type="submit" class="btn btn-primary login-btn" value="Sign Up">
+                </div>
+                <div class="col col-btn-right">
+                    <a href="/" class="btn btn-primary login-btn">Go Back</a>
+                </div>
+            </div>
+		</form>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
