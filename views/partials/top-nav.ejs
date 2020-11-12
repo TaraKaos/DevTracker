@@ -1,0 +1,28 @@
+<nav class="nav navbar navbar-expand-sm navbar-main">
+    <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Logged in as: <span class="capitalize"><%= currentUser.username %></span></a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav project-nav">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Project
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">New Project</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Notifications</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/auth/logout">Log Out</a>
+        </li>
+    </ul>
+</nav>

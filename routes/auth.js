@@ -12,7 +12,7 @@ router.get("/auth/login", function(req, res)
 // handling login logic
 router.post("/auth/login", passport.authenticate("local", 
 	{
-		successRedirect: "/", 
+		successRedirect: "/home", 
 		failureRedirect: "/auth/login",
 		failureFlash: true
     }), function (req, res){   
@@ -42,7 +42,7 @@ router.post("/auth/register", function(req, res)
         passport.authenticate("local")(req, res, function()
         {
 			req.flash("success", "Welcome to the DevTracker " + user.username);
-			res.redirect("/");
+			res.redirect("/home");
 		});
 	});
 });
