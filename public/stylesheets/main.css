@@ -181,11 +181,14 @@ footer {
 .main-content-col {
     margin-right: 0;
     padding-right: 0;
+    min-width: 80%;
 }
 
 .main-content-container {
     margin: 1%;
     padding: 1%;
+    min-width: 98%;
+    min-height: 98%;
 }
 
 .home-row {
@@ -202,4 +205,40 @@ footer {
     margin-right: 0;
     padding-left: 0;
     padding-right: 45%;
+}
+
+.home-top {
+    margin: 0;
+    padding: 0;
+    height: 41vh;
+}
+
+.home-top-left {
+    min-width: 50%;
+    min-height: 100%;
+    border: 2px solid black;
+}
+
+.home-top-right {
+    min-width: 50%;
+    min-height: 50%;
+    border: 2px solid black;
+}
+
+.home-bottom {
+    margin: 0;
+    padding: 0;
+    height: 41vh;
+}
+
+.home-bottom-left {
+    min-width: 50%;
+    min-height: 50%;
+    border: 2px solid black;
+}
+
+.home-bottom-right {
+    min-width: 50%;
+    min-height: 50%;
+    border: 2px solid black;
 }
