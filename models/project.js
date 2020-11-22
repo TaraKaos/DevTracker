@@ -3,8 +3,9 @@ var mongoose = require("mongoose");
 var projectSchema = new mongoose.Schema(
 {
     createdDate: String,
+    editedDate: String,
     title: String,
-    author:
+    owner:
     {
         id:
         {
@@ -15,4 +16,4 @@ var projectSchema = new mongoose.Schema(
     }
 });
 
-module.exports = mongoose.model("Recipe", projectSchema);
+module.exports = mongoose.model("Project", projectSchema);
