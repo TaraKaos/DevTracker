@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+
+<body class="home-body">
+    <%- include('../partials/alert') %>
+    <div class="container home-container">
+        <%- include('../partials/top-nav') %>
+        <div class="row h-100 no-gutter home-row">
+            <div class="col-md-2 side-nav-col">
+                <%- include('../partials/side-nav') %>
+            </div>
+            <div class="col-md-10 main-content-col">
+                <h1>My Projects</h1>
+
+                <% if (projects.length == 0){ %>
+                    <h4>No Projects Found, please create a new project</h4>
+                <% } else { %>
+                    <% projects.forEach(function(project){ %>
+                        <a href="#"><%= project.title %></a>
+                    <% }); %>
+                <% } %>
+
+                <div class="container list-button-container">
+                    <a href="/home" class="btn btn-primary">Go Back</a>
+                    <a href="#" class="btn btn-primary">Create New Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

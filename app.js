@@ -9,8 +9,9 @@ var express       = require("express"),
     User          = require("./models/user");
 
 //requiring routes
-var indexRoutes  = require("./routes/index"),
-    authRoutes   = require("./routes/auth");
+var indexRoutes   = require("./routes/index"),
+    authRoutes    = require("./routes/auth"),
+    projectRoutes = require("./routes/projects");
 
 var dbURL = process.env.DEVTRACKER_BOOK_DB_URL || "mongodb://localhost:27017/devtracker";
 var dbOptions = { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false };
@@ -49,6 +50,7 @@ app.use(function(req, res, next)
 // setup routes
 app.use(indexRoutes);
 app.use(authRoutes);
+app.use(projectRoutes);
 
 app.listen(process.env.PORT || 3000, process.env.IP, function()
 {
